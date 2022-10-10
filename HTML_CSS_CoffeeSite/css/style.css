@@ -1,0 +1,202 @@
+body {
+  color: #3c3c3c;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+}
+/*************   Create the menubar with two flex objects.  One to the set the icon and list on
+  oposite sides; another to create a flexible list of menu items. *********************************/
+nav  {
+  display: flex;
+  background-color: #3c3c3c;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.logo {
+  color: white;
+  padding: 20px 15px;
+}
+
+.nav-links {
+  display: flex; 
+  color: white;
+  list-style: none;
+  padding-right: 10px;
+}
+
+.nav-item a {
+  color: white;
+  text-decoration: none;
+  align-items: right;
+  padding: 10px 15px;
+}
+.nav-item:hover {
+  background-color: white;
+  border-radius: 4px;
+}
+.nav-item:hover a {
+  color: #3c3c3c;
+}
+/******* Create banner section with background image and headings on top *****/
+.banner {
+  padding: 50px;
+  background-image:url("../images/home_banner-x489.png"); 
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: white;
+  text-shadow: 3px 3px 2px #1f1f1f;
+  font-size: 45px;
+}
+
+.banner h1 {
+  padding: -20px;
+  font-family: 'Lobster', cursive;
+}
+
+.content-one {
+  background-color: #eeeeee;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  
+}
+.content-one h2 {
+  font-size: 40px;
+ margin-bottom: -20px;
+}
+
+/**********       Create 3 column layout         ************/
+.triple-col {
+  display: grid;
+  grid-column: auto;
+  grid-template-columns: 300px 300px 300px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 150px;
+  height: 400px;
+}
+
+.content-two a {
+  color: rgb(194, 0, 0);
+  font-weight: bold;
+  text-decoration: none;
+}
+.content-two a:hover {
+  color: red;
+  text-decoration: none;
+}
+
+
+/************* Create 4 column layout    ************************/
+.quad-col {
+  display: grid; 
+  grid-template-columns: 310px 310px 310px 310px;
+  text-align: center;
+  justify-content: center;
+  grid-gap: 40px;
+}
+
+.content-two img {
+  margin-left: -30px;
+}
+
+
+.content-three h2 {
+  font-size:40px;
+  margin-bottom: -10px;
+}
+
+.content-three img {
+margin-left: -50px;
+}
+
+.button {
+  background-color: #edd500;
+  border: none;
+  padding: 15px 62px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+footer {
+  background-color: #eeeeee;
+  background-size: cover;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/**************** create a verticle layout for mobile devices (smaller than 600px ).    *********/
+@media all and (max-width: 600px) {
+  body {
+    background-color: white;
+    margin:0;
+  }
+
+  .banner {
+    font-size: 150%;
+  }
+
+  .content-one{
+    background-color: #eeeeee;
+  }
+
+  .content-one h2 {
+    margin-bottom: 20px;
+  }
+
+  .content-three {
+    margin-bottom: 20px;
+  }
+
+  .triple-col {
+    display: block;
+   height:auto;
+    }
+    .quad-col {
+     display: block;
+     height: auto;
+    }
+
+    .quad-col img {
+      display: block;
+      height: auto;
+      width: 100%;
+      margin-left: 4px;
+    }
+
+    .content-one img {
+      margin-left: 60px;
+    }
+
+    .triple-col img {
+      display: block;
+      height: 90%;
+      margin-top: 20px;
+    }
+
+    nav {
+     text-align: center;
+     display: block;
+     padding-bottom: 10px;
+
+    }
+    .nav-links {
+     display: block;
+     margin-right: 10px;
+    }
+    .logo {
+      display: block;
+      height: auto;
+      padding-top: 50px;
+      margin-left: 10px;
+    }
+}
